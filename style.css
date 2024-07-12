@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --clr-primary-bg-button: hsl(192, 37%, 48%);
+  --clr-secondary-bg-button: hsl(268, 34%, 53%);
+  --clr-button-accent-primary: hsl(192, 90%, 77%);
+  --clr-button-accent-secondary: hsl(268, 100%, 86%);
+  --clr-sub_footer-bg-heading: var(--clr-primary-bg-button);
+  --clr-para: hsl(240, 10%, 57%);
+  --clr-black: hsl(240, 22%, 20%);
+  --clr-white: hsl(0, 0%, 98%);
+  --ff-primary: "Red Hat Display", sans-serif;
+  --fs-body: 1rem;
+  --fs-regular: 1.125rem;
+  /* redefine the fs-regular to 1.125rem on bigger screen sizes */
+  /* margin-inline:1rem or other value for mobile screen spacing */
+  --fs-semi-bold: 2.5rem;
+  --fs-bold: 4rem;
+  --fs-bold-tablet: 3rem;
+  --fs-bold-mobile: 2rem;
+  --fw-regular: 500;
+  --fw-bold: 900;
+}
+
+/* CSS Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* General Styling */
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--clr-para);
+}
+
+.wrapper {
+  /* max-width: 1110px; */
+  width: 87%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.header-image {
+  --spacing-top: 3rem;
+  --spacing-bottom: 3.375rem;
+  margin-inline: auto;
+  margin-top: var(--spacing-top);
+  margin-bottom: var(--spacing-bottom);
+}
+
+header .wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-images {
+  width: 110.5%;
+}
+
+.hero-image {
+  --spacing-bottom: 3rem;
+  position: relative;
+  left: -5%;
+  margin-bottom: var(--spacing-bottom);
+}
+
+.main-heading {
+  --fs-bold: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--clr-black);
+  font-size: var(--fs-bold);
+  font-weight: var(--fw-bold);
+  line-height: 2.75rem;
+  width: 10ch;
+  margin-inline: auto;
+}
+
+.para {
+  font-weight: var(--fw-regular);
+  line-height: 1.625rem;
+}
+
+.main-paragraph {
+  margin-bottom: 2rem;
+  width: 87%;
+  margin-inline: auto;
+}
+
+.buttons button {
+  display: flex;
+  margin-inline: auto;
+  border: 0;
+  color: var(--clr-white);
+  font-weight: 900;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.download-button {
+  background: var(--clr-primary-bg-button);
+  margin-bottom: 1rem;
+  padding: 1.05em 2.5em;
+}
+
+.download-button span {
+  color: var(--clr-button-accent-primary);
+  margin-left: 4px;
+}
+
+.buttons .info-button {
+  --spacing-bottom: 4rem;
+  background: var(--clr-secondary-bg-button);
+  margin-bottom: var(--spacing-bottom);
+  padding: 1.05em 1.85em;
+}
+
+.lollipop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 84px;
+  background-color: var(--clr-para);
+  opacity: 0.25;
+}
+
+.desc-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid rgba(134, 134, 156, 0.25);
+  border-radius: 100px;
+  font-weight: 900;
+  margin-bottom: 4rem;
+  background: var(--clr-white);
+  color: var(--clr-para);
+}
+
+.main-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.main-images img {
+  border-radius: 0.5rem;
+}
+
+.desc-sub-heading {
+  --spacing-top: 4rem;
+  --spacing-bottom: 1.5rem;
+  margin-top: var(--spacing-top);
+  margin-bottom: var(--spacing-bottom);
+  font-weight: var(--fw-bold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--clr-sub_footer-bg-heading);
+}
+
+.desc-heading {
+  margin-bottom: 2rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-bold-mobile);
+  color: var(--clr-black);
+  line-height: 2.25rem;
+}
+
+.desc {
+  --spacingbottom: 2.25rem;
+  margin-bottom: var(--spacing-bottom);
+}
+
+footer .wrapper {
+  width: 100%;
+}
+
+footer .cta-heading {
+  width: 87%;
+  margin-inline: auto;
+}
+
+.cta-lollipop {
+  z-index: 1;
+  position: relative;
+  top: 28px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--clr-sub_footer-bg-heading);
+  opacity: 0.9;
+}
+
+.cta {
+  min-height: 428px;
+  background: url(assets/mobile/image-footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  color: var(--clr-white);
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cta-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid rgba(134, 134, 156, 0.25);
+  border-radius: 100px;
+  font-weight: 900;
+  background: var(--clr-white);
+  color: var(--clr-para);
+}
+
+.cta-heading {
+  --spacing-top: 4rem;
+  --spacing-bottom: 1.5rem;
+  margin-top: var(--spacing-top);
+  margin-bottom: var(--spacing-bottom);
+  font-size: var(--fs-bold-mobile);
+  line-height: 2.25rem;
+  font-weight: var(--fw-bold);
+  position: relative;
+  top: 28px;
+  max-width: 15ch;
+}
+
+.cta-paragraph {
+  --spacing-bottom: 2rem;
+  margin-bottom: var(--spacing-bottom);
+  width: 75%;
+  margin-inline: auto;
+  position: relative;
+  top: 28px;
+}
+
+.cta-button {
+  --spacing-bottom: 4.5rem;
+  margin-bottom: var(--spacing-bottom);
+  background: var(--clr-secondary-bg-button);
+  border-radius: 100px;
+  padding: 1.05em 2.5em;
+  border: 0;
+  color: var(--clr-white);
+  font-weight: 900;
+  cursor: pointer;
+  position: relative;
+  top: 28px;
+}
+
+.cta-button span {
+  color: var(--clr-button-accent-secondary);
+}
+
+@media (min-width:768px) {
+  .header-image {
+    --spacing-bottom: 4rem;
+  }
+
+  .hero-image {
+    --spacing-bottom: 4.5rem;
+    left: -3.2%;
+  }
+
+  .main-heading {
+    font-size: var(--fs-bold-tablet);
+    line-height: 3rem;
+  }
+
+  .main-paragraph {
+    width: 60%;
+  }
+
+  .buttons {
+    display: flex;
+    width: 45.5%;
+    margin-inline: auto;
+  }
+
+  .buttons .download-button {
+    margin-bottom: 5rem;
+  }
+
+  .buttons .info-button {
+    --spacing-bottom: 5rem;
+  }
+
+  .main-images {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.6875rem;
+  }
+
+  .desc {
+    --spacing-bottom: 3.25rem;
+  }
+
+  .desc-sub-heading {
+    --spacing-top: 3rem;
+    --spacing-bottom: 1rem;
+  }
+
+  .desc-heading {
+    font-size: var(--fs-semi-bold);
+    width: 65%;
+    line-height: 2.75rem;
+    margin-inline: auto;
+  }
+
+  .desc-paragraph {
+    width: 87%;
+    margin-inline: auto;
+  }
+
+  .cta {
+    background-image: url(assets/tablet/image-footer.jpg);
+  }
+
+  .cta-heading {
+    --spacing-bottom: 2rem;
+    font-size: var(--fs-semi-bold);
+    max-width: 15ch;
+    line-height: 2.75rem;
+  }
+
+  .cta-paragraph {
+    --spacing-bottom: 2.5rem;
+    font-size: var(--fs-regular);
+  }
+
+  .cta-button {
+    --spacing-bottom: 4.125rem;
+  }
+}
