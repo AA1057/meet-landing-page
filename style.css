@@ -5,6 +5,8 @@
   --clr-secondary-bg-button: hsl(268, 34%, 53%);
   --clr-button-accent-primary: hsl(192, 90%, 77%);
   --clr-button-accent-secondary: hsl(268, 100%, 86%);
+  --btn-hoverstate-clr-primary: hsl(192, 54%, 64%);
+  --btn-hoverstate-clr-secondary: hsl(268, 55%, 71%);
   --clr-sub_footer-bg-heading: var(--clr-primary-bg-button);
   --clr-para: hsl(240, 10%, 57%);
   --clr-black: hsl(240, 22%, 20%);
@@ -170,6 +172,10 @@ header .wrapper {
   padding: 1.05em 2.5em;
 }
 
+.download-button:hover {
+  background-color: var(--btn-hoverstate-clr-primary);
+}
+
 .download-button span {
   color: var(--clr-button-accent-primary);
   margin-left: 4px;
@@ -180,6 +186,10 @@ header .wrapper {
   background: var(--clr-secondary-bg-button);
   margin-bottom: var(--spacing-bottom);
   padding: 1.05em 1.85em;
+}
+
+.info-button:hover {
+  background-color: var(--btn-hoverstate-clr-secondary);
 }
 
 .lollipop {
@@ -331,11 +341,15 @@ footer .cta-heading {
   top: 28px;
 }
 
+.cta-button:hover {
+  background-color: var(--btn-hoverstate-clr-secondary);
+}
+
 .cta-button span {
   color: var(--clr-button-accent-secondary);
 }
 
-@media (min-width:768px) {
+@media (min-width:650px) {
   .header-image {
     --spacing-bottom: 4rem;
   }
@@ -356,16 +370,17 @@ footer .cta-heading {
 
   .buttons {
     display: flex;
-    width: 45.5%;
+    width: 350px;
     margin-inline: auto;
-  }
-
-  .buttons .download-button {
     margin-bottom: 5rem;
   }
 
+  .buttons .download-button {
+    margin-bottom: 0;
+  }
+
   .buttons .info-button {
-    --spacing-bottom: 5rem;
+    --spacing-bottom: 0;
   }
 
   .main-images {
@@ -412,5 +427,11 @@ footer .cta-heading {
 
   .cta-button {
     --spacing-bottom: 4.125rem;
+  }
+}
+
+@media (min-width:1000px) {
+  .hero-image {
+    --spacing-bottom: 6.75rem;
   }
 }
