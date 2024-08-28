@@ -14,8 +14,6 @@
   --ff-primary: "Red Hat Display", sans-serif;
   --fs-body: 1rem;
   --fs-regular: 1.125rem;
-  /* redefine the fs-regular to 1.125rem on bigger screen sizes */
-  /* margin-inline:1rem or other value for mobile screen spacing */
   --fs-semi-bold: 2.5rem;
   --fs-bold: 4rem;
   --fs-bold-tablet: 3rem;
